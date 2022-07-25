@@ -5,7 +5,7 @@ class Dobato < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/himkt/dobato-go/releases/download/v0.1.0/dobato-darwin-amd64"
+      url "https://github.com/himkt/dobato-go/releases/download/v0.1.0/dobato-darwin-arm64"
       sha256 "2b258de40d742b8b8e9f99ee85cf5525a97c8c9de026075f43a58a7c5f3b2c9b"
 
       def install
