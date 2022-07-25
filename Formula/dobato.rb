@@ -5,7 +5,7 @@ class Dobato < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/himkt/dobato-go/releases/download/v0.1.0/dobato-darwin-arm64"
+      url "https://github.com/himkt/dobato-go/releases/download/0.1.0/dobato-darwin-arm64-v0.1.0"
       sha256 "2b258de40d742b8b8e9f99ee85cf5525a97c8c9de026075f43a58a7c5f3b2c9b"
 
       def install
@@ -13,7 +13,7 @@ class Dobato < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/himkt/dobato-go/releases/download/v0.1.0/dobato-darwin-amd64"
+      url "https://github.com/himkt/dobato-go/releases/download/0.1.0/dobato-darwin-amd64-v0.1.0"
       sha256 "3b62cda2e88bc494f476f5242f1991b3b8450b25ec50c33b9d63f602e0b143f1"
 
       def install
@@ -24,8 +24,9 @@ class Dobato < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/himkt/dobato-go/archive/refs/tags/v0.1.0.tar.gz"
-      sha256 "3d8a9836ffc3d105b4cbe59275ef21f58323a4a8470ceea803c781c49af443a3"
+      url "https://github.com/himkt/dobato-go/archive/refs/tags/0.1.0.tar.gz"
+      sha256 "58f0a540f5b38c26b9747034064f5ad9f3fca7793f9bc660c89599309afa961f"
+
       depends_on "go" => :build
 
       def install
@@ -34,7 +35,7 @@ class Dobato < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/himkt/dobato-go/releases/download/v0.1.0/dobato-linux-amd64"
+      url "https://github.com/himkt/dobato-go/releases/download/0.1.0/dobato-linux-amd64-v0.1.0"
       sha256 "89fbf514e39f8809306a90e768b7be47fd2032316e32378278f07982f1434758"
 
       def install
