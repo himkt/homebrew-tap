@@ -9,7 +9,7 @@ class Dobato < Formula
       sha256 "2b258de40d742b8b8e9f99ee85cf5525a97c8c9de026075f43a58a7c5f3b2c9b"
 
       def install
-        bin.install "dobato-darwin-amd64" => "dobato"
+        bin.install "dobato-darwin-arm64" => "dobato"
       end
     end
     if Hardware::CPU.intel?
