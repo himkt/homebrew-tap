@@ -1,8 +1,8 @@
 class Omoide < Formula
   desc "🤖 Browse and clean tweets in CLI"
   homepage "https://github.com/himkt/omoide"
-  url "https://github.com/himkt/omoide/archive/refs/tags/0.0.1.tar.gz"
-  sha256 "c0e7170f45481302df25ff2d7d12ad7ae7d88b0ca7a338ba53bee79203743bad"
+  url "https://github.com/himkt/omoide/archive/refs/tags/0.1.1.tar.gz"
+  sha256 "98baa691de79fa8a562854819354ec3d764401ee21837115390cca0236848058"
   license "MIT"
 
   depends_on "rust" => :build
