@@ -1,5 +1,5 @@
 # https://github.com/Homebrew/homebrew-core/blob/2f30eb3f48aaffdcc5c219abf0557db583ab5f77/Formula/s/sheldon.rb
-class Sheldon < Formula
+class SheldonAT074 < Formula
   desc "Fast, configurable, shell plugin manager"
   homepage "https://sheldon.cli.rs"
   url "https://github.com/rossmacarthur/sheldon/archive/refs/tags/0.7.4.tar.gz"
