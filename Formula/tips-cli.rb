@@ -5,14 +5,14 @@ class TipsCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/himkt/tips-cli/releases/download/0.1.0/tips-cli-aarch64-apple-darwin"
-      sha256 "4bfe8fd914dc7680db6d56a0bd1f8ad0acf985153426edd509db451472706c53"
+      url "https://github.com/himkt/tips-cli/releases/download/0.2.0/tips-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "de77696526f14e30533d74d1907f9964dc2647c6e5922ed7b63136076e8c7423"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/himkt/tips-cli/releases/download/0.1.0/tips-cli-x86_64-unknown-linux-gnu"
-      sha256 "dbc1d5464cad7622b2a62e68cb893056391629b2e36837735eae9495aa0ffa59"
+      url "https://github.com/himkt/tips-cli/releases/download/0.2.0/tips-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "cf04d6cce387ed0aca49655cf160bfee69e96fbb52a3c19c4a4d4f357af5f879"
     end
   end
 
