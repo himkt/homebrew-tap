@@ -1,7 +1,7 @@
 ### Use
 
 ```
-brew tap himkt/himkt
+brew tap himkt/tap
 ```
 
 ### Add formula
