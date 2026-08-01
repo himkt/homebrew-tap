@@ -112,3 +112,15 @@ raise "No formulae or casks found under #{ROOT}" if formulae.empty? && casks.emp
 
 formulae.each { |path| write(ROOT/"api/formula/#{path.stem}.json", formula_hash(path)) }
 casks.each { |path| write(ROOT/"api/cask/#{path.stem}.json", cask_hash(path)) }
+
+# api/ describes what the tap currently ships, so metadata for a package that no
+# longer has a source file is deleted rather than left to advertise it.
+{ "api/formula" => formulae, "api/cask" => casks }.each do |dir, sources|
+  stems = sources.map(&:stem)
+  (ROOT/dir).glob("*.json").sort.each do |path|
+    next if stems.include?(path.stem)
+
+    path.delete
+    puts "Removed #{path.relative_path_from(ROOT)}"
+  end
+end
