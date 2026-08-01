@@ -61,7 +61,7 @@
   "sha256": "69e4cf9afb6d5602f821f45d09dfb95d08b56edeee5693b34ab249db18a8c902",
   "skip_livecheck": false,
   "tap": "himkt/tap",
-  "tap_git_head": "57e7ec1905856232aaea6d9d56292a36460aa848",
+  "tap_git_head": "7a893c30303d1c9194043ed94f3dbe84d053fa11",
   "token": "voicevox",
   "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-arm64.dmg",
   "url_specs": {},

@@ -34,50 +34,69 @@ def stamp_tap_identity(hash, path, name_key:, full_name_key:)
   hash
 end
 
-# Evaluate a formula once per bottle tag and record the keys that differ from
-# the base hash. Formulae here ship prebuilt binaries, so a tag whose assets the
+# The tag whose hash becomes the base that "variations" is diffed against. Every
+# formula is evaluated under an explicitly simulated tag rather than under the
+# running machine's own platform, so macOS and Linux generate identical files.
+BASE_TAG_PRIORITY = %i[arm64_sequoia sequoia arm64_linux x86_64_linux].freeze
+
+def bottle_tag(symbol)
+  OnSystem::VALID_OS_ARCH_TAGS.find { |tag| tag.to_sym == symbol } ||
+    raise("#{symbol} is not a bottle tag Homebrew recognises")
+end
+
+# Evaluate a formula as the given tag sees it, or return nil when that platform
+# is unsupported. Formulae here ship prebuilt binaries, so a tag whose assets the
 # upstream project never published cannot be evaluated at all: the `on_macos` /
-# `on_arm` blocks leave the spec without a URL and Formula.new rejects it. Such a
-# tag is genuinely unsupported and is therefore absent from "variations" — the
-# same conclusion a consumer draws when no entry matches its platform.
-def formula_variations(formula, base)
-  path = formula.path
+# `on_arm` blocks leave the spec without a URL and Formula.new rejects it.
+def formula_hash_for_tag(name, path, contents, tag)
+  Homebrew::SimulateSystem.with_tag(tag) do
+    namespace = Formulary.class_s("Variations#{tag.to_sym.capitalize}")
+    klass = Formulary.load_formula(name, path, contents, namespace, flags: [], ignore_errors: true)
+    klass.new(name, path, :stable, alias_path: nil, force_bottle: false)
+        .to_hash.except(*FORMULA_STRIP)
+  end
+rescue FormulaSpecificationError
+  nil
+end
+
+# An unsupported platform is absent from "variations" — the same conclusion a
+# consumer draws when no entry matches its own tag.
+def formula_hash(path)
+  name = path.stem
   contents = path.read
+
+  by_tag = OnSystem::VALID_OS_ARCH_TAGS.filter_map do |tag|
+    hash = formula_hash_for_tag(name, path, contents, tag)
+    [tag.to_sym, hash] if hash
+  end.to_h
+  raise "#{name} publishes no artifact for any platform Homebrew supports" if by_tag.empty?
+
+  # Any supported tag can serve as the base; the priority list only keeps the
+  # choice stable for the platforms this tap actually targets.
+  base_tag = BASE_TAG_PRIORITY.find { |tag| by_tag.key?(tag) } || by_tag.keys.first
+  base = by_tag.fetch(base_tag)
+
   variations = {}
+  by_tag.except(base_tag).each do |tag, hash|
+    hash.each do |key, value|
+      next if value.to_s == base[key].to_s
 
-  OnSystem::VALID_OS_ARCH_TAGS.each do |tag|
-    Homebrew::SimulateSystem.with_tag(tag) do
-      namespace = Formulary.class_s("Variations#{tag.to_sym.capitalize}")
-      klass = Formulary.load_formula(formula.name, path, contents, namespace,
-                                     flags: formula.class.build_flags, ignore_errors: true)
-      variation = klass.new(formula.name, path, :stable,
-                            alias_path: formula.alias_path, force_bottle: false)
-
-      variation.to_hash.each do |key, value|
-        next if FORMULA_STRIP.include?(key)
-        next if value.to_s == base[key].to_s
-
-        variations[tag.to_sym] ||= {}
-        variations[tag.to_sym][key] = value
-      end
-    rescue FormulaSpecificationError
-      next
+      variations[tag] ||= {}
+      variations[tag][key] = value
     end
   end
 
-  variations
+  stamp_tap_identity(base.merge("variations" => variations), path,
+                     name_key: "name", full_name_key: "full_name")
 end
 
-def formula_hash(path)
-  formula = Formulary.factory(path)
-  hash = formula.to_hash.except(*FORMULA_STRIP)
-  hash["variations"] = formula_variations(formula, hash)
-  stamp_tap_identity(hash, path, name_key: "name", full_name_key: "full_name")
-end
-
+# Casks run on macOS only, so the base tag is pinned rather than picked: an Intel
+# Mac and an ARM Mac then generate the same file, and Homebrew's own
+# `to_hash_with_variations` fills in every other tag.
 def cask_hash(path)
-  cask = Cask::CaskLoader.load(path)
-  hash = cask.to_hash_with_variations.except(*CASK_STRIP)
+  hash = Homebrew::SimulateSystem.with_tag(bottle_tag(BASE_TAG_PRIORITY.first)) do
+    Cask::CaskLoader.load(path).to_hash_with_variations.except(*CASK_STRIP)
+  end
   stamp_tap_identity(hash, path, name_key: "token", full_name_key: "full_token")
 end
 
