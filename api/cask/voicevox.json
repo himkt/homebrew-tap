@@ -1,0 +1,103 @@
+{
+  "artifacts": [
+    {
+      "app": [
+        "VOICEVOX.app"
+      ],
+      "target": "/Applications/VOICEVOX.app"
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/voicevox",
+            "~/Library/Application Support/voicevox-cpu",
+            "~/Library/Application Support/voicevox-engine",
+            "~/Library/Logs/voicevox-cpu",
+            "~/Library/Preferences/jp.hiroshiba.voicevox.plist",
+            "~/Library/Saved Application State/jp.hiroshiba.voicevox.savedState"
+          ]
+        }
+      ]
+    }
+  ],
+  "auto_updates": null,
+  "autobump": true,
+  "bundle_short_version": "0.25.0",
+  "bundle_version": "0.25.0",
+  "caveats": null,
+  "caveats_rosetta": null,
+  "conflicts_with": null,
+  "container": null,
+  "depends_on": {},
+  "deprecate_args": null,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "deprecation_replacement_cask": null,
+  "deprecation_replacement_formula": null,
+  "desc": "Free, medium-quality text-to-speech and singing synthesizer software",
+  "disable_args": null,
+  "disable_date": null,
+  "disable_reason": null,
+  "disable_replacement_cask": null,
+  "disable_replacement_formula": null,
+  "disabled": false,
+  "full_token": "himkt/tap/voicevox",
+  "homepage": "https://voicevox.hiroshiba.jp/",
+  "languages": [],
+  "name": [
+    "VOICEVOX"
+  ],
+  "no_autobump_message": null,
+  "old_tokens": [],
+  "pinned": false,
+  "pinned_version": null,
+  "rename": [],
+  "ruby_source_checksum": {
+    "sha256": "62a7df714f59daab94b1a740f30eb8bcb845f1c3a98b99926fb50b9ba0bb029b"
+  },
+  "ruby_source_path": "Casks/voicevox.rb",
+  "sha256": "69e4cf9afb6d5602f821f45d09dfb95d08b56edeee5693b34ab249db18a8c902",
+  "skip_livecheck": false,
+  "tap": "himkt/tap",
+  "tap_git_head": "57e7ec1905856232aaea6d9d56292a36460aa848",
+  "token": "voicevox",
+  "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-arm64.dmg",
+  "url_specs": {},
+  "variations": {
+    "golden_gate": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    },
+    "tahoe": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    },
+    "sequoia": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    },
+    "sonoma": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    },
+    "ventura": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    },
+    "monterey": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    },
+    "big_sur": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    },
+    "catalina": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    }
+  },
+  "version": "0.25.0"
+}
