@@ -16,10 +16,10 @@ make formula REPO=himkt/tips-cli VERSION=0.2.2
 formulae.brew.sh, so consumers such as mise can read this tap over
 raw.githubusercontent.com without running `brew`.
 
-Each file holds one base hash plus a `variations` object keyed by bottle tag
-(`x86_64_linux`, `sonoma`, ...). A consumer deep-merges the entry matching its
-own platform over the base; a platform the project publishes no artifact for has
-no entry. Regenerate after editing a formula or cask:
+A consumer installs the prebuilt binary from `bottle.stable.files`, keyed by
+bottle tag (`arm64_sonoma`, `x86_64_linux`, ...), and falls back to building the
+platform-independent `urls.stable` source archive when no bottle matches its tag.
+Regenerate after editing a formula or cask:
 
 ```bash
 make api

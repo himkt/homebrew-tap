@@ -1,8 +1,32 @@
 {
   "aliases": [],
   "autobump": true,
-  "bottle": {},
-  "build_dependencies": [],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://github.com/himkt/cafleet/releases/download/0.23.2",
+      "files": {
+        "arm64_sonoma": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://github.com/himkt/cafleet/releases/download/0.23.2/cafleet-0.23.2.arm64_sonoma.bottle.tar.gz",
+          "sha256": "babff6f7f37119f016a5f6786b573c2899c6f70f2583faf0da4bd512de4abf2d"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://github.com/himkt/cafleet/releases/download/0.23.2/cafleet-0.23.2.x86_64_linux.bottle.tar.gz",
+          "sha256": "adb1a40e4e2f439db54d6876b95a8b8f1ef9b54d951c0717f85853ae742266c5"
+        },
+        "arm64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://github.com/himkt/cafleet/releases/download/0.23.2/cafleet-0.23.2.arm64_linux.bottle.tar.gz",
+          "sha256": "a0107b3aa131c7bd7ff31c4d28513afbefe9167830f3651c2160da1c0eefd40b"
+        }
+      }
+    }
+  },
+  "build_dependencies": [
+    "mise"
+  ],
   "caveats": null,
   "compatibility_version": null,
   "conflicts_with": [],
@@ -40,54 +64,31 @@
   "requirements": [],
   "revision": 0,
   "ruby_source_checksum": {
-    "sha256": "3d0469e6145d07e1a323e6c57bcd29c33ddb880429282b7c7e099ba00edf85d3"
+    "sha256": "8b88885f4d4dc17bd9069da9ac1eb57e52150831d5dafeb743252c8920b0bda9"
   },
   "ruby_source_path": "Formula/cafleet.rb",
   "service": null,
   "skip_livecheck": false,
   "tap": "himkt/tap",
-  "tap_git_head": "5eb852fe8d7411bb40564d678da012238408f8a0",
+  "tap_git_head": "cca0810301401467218600acb7d5ff0ad0b6e9ef",
   "test_dependencies": [],
   "urls": {
     "stable": {
-      "url": "https://github.com/himkt/cafleet/releases/download/0.23.1/cafleet-v0.23.1-aarch64-apple-darwin.tar.gz",
+      "url": "https://github.com/himkt/cafleet/archive/refs/tags/0.23.2.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "fa2a6e3c36b7ac55e9ee97cc755f2fc67f00bc6fe2f375f6b557f2d1b6ff6cfc"
+      "checksum": "456fb231ab6c43e5b021876db6a0097959de6ec45aa7acacd501633439726e7c"
     }
   },
   "uses_from_macos": [],
   "uses_from_macos_bounds": [],
-  "variations": {
-    "x86_64_linux": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/cafleet/releases/download/0.23.1/cafleet-v0.23.1-x86_64-unknown-linux-musl.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "8dd3500998412d2ad0e12631cc9b0dc6364f4fa0e2c43fbfebda25562a3bee61"
-        }
-      }
-    },
-    "arm64_linux": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/cafleet/releases/download/0.23.1/cafleet-v0.23.1-aarch64-unknown-linux-musl.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "dede0cb0511147e3b7b3be65df9e98dc78ae82f9bbd512f1f762cb343683c811"
-        }
-      }
-    }
-  },
+  "variations": {},
   "version_scheme": 0,
   "versioned_formulae": [],
   "versions": {
-    "stable": "0.23.1",
+    "stable": "0.23.2",
     "head": null,
-    "bottle": false
+    "bottle": true
   }
 }
