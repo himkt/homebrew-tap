@@ -1,0 +1,181 @@
+{
+  "aliases": [],
+  "autobump": true,
+  "bottle": {},
+  "build_dependencies": [],
+  "caveats": null,
+  "compatibility_version": null,
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "dependencies": [],
+  "deprecate_args": null,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "deprecation_replacement_cask": null,
+  "deprecation_replacement_formula": null,
+  "desc": "A CLI tool to run random tests for programming contest",
+  "disable_args": null,
+  "disable_date": null,
+  "disable_reason": null,
+  "disable_replacement_cask": null,
+  "disable_replacement_formula": null,
+  "disabled": false,
+  "full_name": "himkt/tap/ac-random-test",
+  "homepage": "https://github.com/himkt/ac-random-test",
+  "keg_only": false,
+  "keg_only_reason": null,
+  "license": "MIT",
+  "link_overwrite": [],
+  "name": "ac-random-test",
+  "no_autobump_message": null,
+  "oldnames": [],
+  "optional_dependencies": [],
+  "options": [],
+  "patches": [],
+  "post_install_defined": false,
+  "post_install_steps": [],
+  "pour_bottle_only_if": null,
+  "recommended_dependencies": [],
+  "requirements": [],
+  "revision": 0,
+  "ruby_source_checksum": {
+    "sha256": "c233ff04ed9698a8bf5403e4d0494607db7df66e4e544f6671fe1dd77323f3be"
+  },
+  "ruby_source_path": "Formula/ac-random-test.rb",
+  "service": null,
+  "skip_livecheck": false,
+  "tap": "himkt/tap",
+  "tap_git_head": "09488c5409660ab540cf06db62458952d989b0e0",
+  "test_dependencies": [],
+  "urls": {
+    "stable": {
+      "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-aarch64-apple-darwin.tar.gz",
+      "tag": null,
+      "revision": null,
+      "using": null,
+      "checksum": "f0d32e8fff86d27aa7ab6737192b38e11c290fdbf6fa0df7c1bc2373163b0a11"
+    }
+  },
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "variations": {
+    "golden_gate": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-apple-darwin.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "49486e4c15027f56187a0be20c2bbdfd1fe3b7591c80ad057bb058079b3d8474"
+        }
+      }
+    },
+    "tahoe": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-apple-darwin.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "49486e4c15027f56187a0be20c2bbdfd1fe3b7591c80ad057bb058079b3d8474"
+        }
+      }
+    },
+    "sequoia": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-apple-darwin.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "49486e4c15027f56187a0be20c2bbdfd1fe3b7591c80ad057bb058079b3d8474"
+        }
+      }
+    },
+    "sonoma": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-apple-darwin.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "49486e4c15027f56187a0be20c2bbdfd1fe3b7591c80ad057bb058079b3d8474"
+        }
+      }
+    },
+    "ventura": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-apple-darwin.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "49486e4c15027f56187a0be20c2bbdfd1fe3b7591c80ad057bb058079b3d8474"
+        }
+      }
+    },
+    "monterey": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-apple-darwin.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "49486e4c15027f56187a0be20c2bbdfd1fe3b7591c80ad057bb058079b3d8474"
+        }
+      }
+    },
+    "big_sur": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-apple-darwin.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "49486e4c15027f56187a0be20c2bbdfd1fe3b7591c80ad057bb058079b3d8474"
+        }
+      }
+    },
+    "catalina": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-apple-darwin.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "49486e4c15027f56187a0be20c2bbdfd1fe3b7591c80ad057bb058079b3d8474"
+        }
+      }
+    },
+    "x86_64_linux": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-x86_64-unknown-linux-gnu.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "157a7e1692fff627daa2fa47d524b10bb9e95a7df573ffd56c75fcc8e2bc906b"
+        }
+      }
+    },
+    "arm64_linux": {
+      "urls": {
+        "stable": {
+          "url": "https://github.com/himkt/ac-random-test/releases/download/0.1.1/ac-random-test-aarch64-unknown-linux-gnu.tar.gz",
+          "tag": null,
+          "revision": null,
+          "using": null,
+          "checksum": "d09cca254c4a9aad03a047580231cdd3199a190fcb2e9192e117ef9fcebb58dd"
+        }
+      }
+    }
+  },
+  "version_scheme": 0,
+  "versioned_formulae": [],
+  "versions": {
+    "stable": "0.1.1",
+    "head": null,
+    "bottle": false
+  }
+}
