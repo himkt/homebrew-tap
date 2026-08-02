@@ -1,8 +1,37 @@
 {
   "aliases": [],
   "autobump": true,
-  "bottle": {},
-  "build_dependencies": [],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://github.com/himkt/pathfinder/releases/download/0.1.1",
+      "files": {
+        "arm64_sonoma": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://github.com/himkt/pathfinder/releases/download/0.1.1/pathfinder-0.1.1.arm64_sonoma.bottle.tar.gz",
+          "sha256": "e254ad8ef6009a22e9838d8bc26c3af79778aecee3a19c670a7fe61611ff09f3"
+        },
+        "sonoma": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://github.com/himkt/pathfinder/releases/download/0.1.1/pathfinder-0.1.1.sonoma.bottle.tar.gz",
+          "sha256": "4c07b517078f51c80fca097e9e8b661748fae17f056bc5d5620a63d221dfbca0"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://github.com/himkt/pathfinder/releases/download/0.1.1/pathfinder-0.1.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "9585901bb8cba71b3375789a765ed9162925a79baef76e0b1a20d597553e27e5"
+        },
+        "arm64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://github.com/himkt/pathfinder/releases/download/0.1.1/pathfinder-0.1.1.arm64_linux.bottle.tar.gz",
+          "sha256": "3e801db535675fcf2521810bcdf210fdaca23eb9e8dd18c1cfcecbb6e5b9c4b0"
+        }
+      }
+    }
+  },
+  "build_dependencies": [
+    "rust"
+  ],
   "caveats": null,
   "compatibility_version": null,
   "conflicts_with": [],
@@ -40,131 +69,31 @@
   "requirements": [],
   "revision": 0,
   "ruby_source_checksum": {
-    "sha256": "33ad02712a476126daea6a997ef262823405d74acb9bed4ad2006a7ab6685a78"
+    "sha256": "5cab01b8a4ef51f3456ab661f4be223a3438a5f10ae4fb39b665e333dbf35ed7"
   },
   "ruby_source_path": "Formula/pathfinder.rb",
   "service": null,
   "skip_livecheck": false,
   "tap": "himkt/tap",
-  "tap_git_head": "cca0810301401467218600acb7d5ff0ad0b6e9ef",
+  "tap_git_head": "fa327083feddc9185b683e6cec12c66072b7c627",
   "test_dependencies": [],
   "urls": {
     "stable": {
-      "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-aarch64-apple-darwin.tar.gz",
+      "url": "https://github.com/himkt/pathfinder/archive/refs/tags/0.1.1.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "ef010af744b543bf60d709c5e1a2c4d279df471a281669900efea5e7f68da0e0"
+      "checksum": "5b028717aa25a49b8f9ec60e12e796f75f46989cd1b6ef513015de402e90c1e3"
     }
   },
   "uses_from_macos": [],
   "uses_from_macos_bounds": [],
-  "variations": {
-    "golden_gate": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-        }
-      }
-    },
-    "tahoe": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-        }
-      }
-    },
-    "sequoia": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-        }
-      }
-    },
-    "sonoma": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-        }
-      }
-    },
-    "ventura": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-        }
-      }
-    },
-    "monterey": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-        }
-      }
-    },
-    "big_sur": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-        }
-      }
-    },
-    "catalina": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-        }
-      }
-    },
-    "x86_64_linux": {
-      "urls": {
-        "stable": {
-          "url": "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-unknown-linux-gnu.tar.gz",
-          "tag": null,
-          "revision": null,
-          "using": null,
-          "checksum": "b3edc610c0f9fe7ca95510bacbed500e7821ba5218f7f9149936c4500cdc77a1"
-        }
-      }
-    }
-  },
+  "variations": {},
   "version_scheme": 0,
   "versioned_formulae": [],
   "versions": {
-    "stable": "0.1.0",
+    "stable": "0.1.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   }
 }

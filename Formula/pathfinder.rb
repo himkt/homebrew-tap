@@ -1,25 +1,21 @@
 class Pathfinder < Formula
   desc "MCP client for jumping to definitions using language servers written in Rust."
   homepage "https://github.com/himkt/pathfinder"
+  url "https://github.com/himkt/pathfinder/archive/refs/tags/0.1.1.tar.gz"
+  sha256 "5b028717aa25a49b8f9ec60e12e796f75f46989cd1b6ef513015de402e90c1e3"
   license "MIT"
 
-  on_macos do
-    on_arm do
-      url "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-aarch64-apple-darwin.tar.gz"
-      sha256 "ef010af744b543bf60d709c5e1a2c4d279df471a281669900efea5e7f68da0e0"
-    end
-    on_intel do
-      url "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-apple-darwin.tar.gz"
-      sha256 "a2f78bf19aeeda7558ba0a9fae60ce9d20d728d76b1d14712b75e944e491690f"
-    end
+  bottle do
+    root_url "https://github.com/himkt/pathfinder/releases/download/0.1.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "e254ad8ef6009a22e9838d8bc26c3af79778aecee3a19c670a7fe61611ff09f3"
+    sha256 cellar: :any_skip_relocation, sonoma:       "4c07b517078f51c80fca097e9e8b661748fae17f056bc5d5620a63d221dfbca0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9585901bb8cba71b3375789a765ed9162925a79baef76e0b1a20d597553e27e5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "3e801db535675fcf2521810bcdf210fdaca23eb9e8dd18c1cfcecbb6e5b9c4b0"
   end
-  on_linux do
-    on_intel do
-      url "https://github.com/himkt/pathfinder/releases/download/v0.1.0/pathfinder-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b3edc610c0f9fe7ca95510bacbed500e7821ba5218f7f9149936c4500cdc77a1"
-    end
-  end
+
+  depends_on "rust" => :build
+
   def install
-    bin.install "pathfinder"
+    system "cargo", "install", *std_cargo_args
   end
 end
