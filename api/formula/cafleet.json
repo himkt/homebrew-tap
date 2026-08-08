@@ -40,21 +40,21 @@
   "requirements": [],
   "revision": 0,
   "ruby_source_checksum": {
-    "sha256": "3d0469e6145d07e1a323e6c57bcd29c33ddb880429282b7c7e099ba00edf85d3"
+    "sha256": "7fcf740202f89a1c4f29ba41a6f78ae1aa396c962a0118f320d678f1ea8f496e"
   },
   "ruby_source_path": "Formula/cafleet.rb",
   "service": null,
   "skip_livecheck": false,
   "tap": "himkt/tap",
-  "tap_git_head": "09488c5409660ab540cf06db62458952d989b0e0",
+  "tap_git_head": "5eb852fe8d7411bb40564d678da012238408f8a0",
   "test_dependencies": [],
   "urls": {
     "stable": {
-      "url": "https://github.com/himkt/cafleet/releases/download/0.23.1/cafleet-v0.23.1-aarch64-apple-darwin.tar.gz",
+      "url": "https://github.com/himkt/cafleet/releases/download/0.23.4/cafleet-v0.23.4-aarch64-apple-darwin.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "fa2a6e3c36b7ac55e9ee97cc755f2fc67f00bc6fe2f375f6b557f2d1b6ff6cfc"
+      "checksum": "47946c97359951dbd5345dd4259db2986186be9ef6559c4463686a0ee4d3ddb2"
     }
   },
   "uses_from_macos": [],
@@ -63,22 +63,22 @@
     "x86_64_linux": {
       "urls": {
         "stable": {
-          "url": "https://github.com/himkt/cafleet/releases/download/0.23.1/cafleet-v0.23.1-x86_64-unknown-linux-musl.tar.gz",
+          "url": "https://github.com/himkt/cafleet/releases/download/0.23.4/cafleet-v0.23.4-x86_64-unknown-linux-musl.tar.gz",
           "tag": null,
           "revision": null,
           "using": null,
-          "checksum": "8dd3500998412d2ad0e12631cc9b0dc6364f4fa0e2c43fbfebda25562a3bee61"
+          "checksum": "24eeebc15cd3c70bc14e64eda9a8c95cbd2e9a0f1f3623145cbd2949ab76ac47"
         }
       }
     },
     "arm64_linux": {
       "urls": {
         "stable": {
-          "url": "https://github.com/himkt/cafleet/releases/download/0.23.1/cafleet-v0.23.1-aarch64-unknown-linux-musl.tar.gz",
+          "url": "https://github.com/himkt/cafleet/releases/download/0.23.4/cafleet-v0.23.4-aarch64-unknown-linux-musl.tar.gz",
           "tag": null,
           "revision": null,
           "using": null,
-          "checksum": "dede0cb0511147e3b7b3be65df9e98dc78ae82f9bbd512f1f762cb343683c811"
+          "checksum": "40624d5906a1b1ef2bc25f17b1d563cc9997297852cd9a286b1a997615923d05"
         }
       }
     }
@@ -86,7 +86,7 @@
   "version_scheme": 0,
   "versioned_formulae": [],
   "versions": {
-    "stable": "0.23.1",
+    "stable": "0.23.4",
     "head": null,
     "bottle": false
   }
