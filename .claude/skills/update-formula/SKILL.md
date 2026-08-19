@@ -39,7 +39,7 @@ Argument: the GitHub release URL. Parse `{owner}/{repo}` and `{tag}` from it (e.
 
    This rewrites every file under `api/` (the other formulae/casks pick up a new `tap_git_head`). Include all regenerated files in the commit.
 
-5. **Deliver as a PR** per the git-workflow rules: branch `{name}-{tag}`, single-line commit `feat: update {name} to {tag}`, push, then `gh pr create --fill` and `gh pr edit {number} --add-reviewer @copilot`.
+5. **Deliver as a PR** per the git-workflow rules: branch `{name}-{tag}`, single-line commit `feat: update {name} to {tag}`, push, then `gh pr create --fill`.
 
 ## Verification
 
