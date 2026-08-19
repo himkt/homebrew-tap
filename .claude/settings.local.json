@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-readme)",
+      "Bash(gh release view *)",
+      "Bash(gh release download *)",
+      "Bash(make api *)",
+      "Bash(shasum *)"
+    ]
+  }
+}
