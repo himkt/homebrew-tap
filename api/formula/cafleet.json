@@ -4,22 +4,22 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "root_url": "https://github.com/himkt/cafleet/releases/download/0.24.1",
+      "root_url": "https://github.com/himkt/cafleet/releases/download/0.24.2",
       "files": {
         "arm64_sonoma": {
           "cellar": ":any_skip_relocation",
-          "url": "https://github.com/himkt/cafleet/releases/download/0.24.1/cafleet-0.24.1.arm64_sonoma.bottle.tar.gz",
-          "sha256": "d4fc7ac94192d1e610f368fd0628e25fcae36ac6da977dc788ed9b6a88c8074c"
+          "url": "https://github.com/himkt/cafleet/releases/download/0.24.2/cafleet-0.24.2.arm64_sonoma.bottle.tar.gz",
+          "sha256": "c30ceffe2993b2102fe3cac7b570d8d4ebf4ebcaaf34810b5dc6788bf4f53933"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://github.com/himkt/cafleet/releases/download/0.24.1/cafleet-0.24.1.x86_64_linux.bottle.tar.gz",
-          "sha256": "0c8324533aba968bd033bc25e206d45a4e0eda99de1ec701b58f3c9286a4b604"
+          "url": "https://github.com/himkt/cafleet/releases/download/0.24.2/cafleet-0.24.2.x86_64_linux.bottle.tar.gz",
+          "sha256": "17484bf3b43157c8b634faa7cee25bbeb15ca0afb9e1673efb441ffd4d806e26"
         },
         "arm64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://github.com/himkt/cafleet/releases/download/0.24.1/cafleet-0.24.1.arm64_linux.bottle.tar.gz",
-          "sha256": "457b9e6f98226d0e5dc60440ffda0e4f0c1e91e334c4d7ff33655aa721f0e920"
+          "url": "https://github.com/himkt/cafleet/releases/download/0.24.2/cafleet-0.24.2.arm64_linux.bottle.tar.gz",
+          "sha256": "be108584fafb34aab99000833e999dc73c1965e9a96c332f651419454dba7655"
         }
       }
     }
@@ -64,21 +64,21 @@
   "requirements": [],
   "revision": 0,
   "ruby_source_checksum": {
-    "sha256": "dfe0b29ed0fd989690ad69041108974f9342ee831f39b49c6b2156d09eb5101c"
+    "sha256": "1ed4075e75c441c6a1d54b994ce908d350f75fc18d9b04c0e8ada3774a3eaf1f"
   },
   "ruby_source_path": "Formula/cafleet.rb",
   "service": null,
   "skip_livecheck": false,
   "tap": "himkt/tap",
-  "tap_git_head": "63daecf6c02f78c246d52597c909ad8acb1e124e",
+  "tap_git_head": "3484b6c75d1b5c98b08190099a4902185bd82d42",
   "test_dependencies": [],
   "urls": {
     "stable": {
-      "url": "https://github.com/himkt/cafleet/archive/refs/tags/0.24.1.tar.gz",
+      "url": "https://github.com/himkt/cafleet/archive/refs/tags/0.24.2.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "83ba1b53ad1fa46348ea85f8430b2b597b72e0f7478183ec91bce017f5177def"
+      "checksum": "a46b315f4da668a24e87a9f0296444157144b4166ee9fe9ad10273e494fc4dd6"
     }
   },
   "uses_from_macos": [],
@@ -87,7 +87,7 @@
   "version_scheme": 0,
   "versioned_formulae": [],
   "versions": {
-    "stable": "0.24.1",
+    "stable": "0.24.2",
     "head": null,
     "bottle": true
   }
