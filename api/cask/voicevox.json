@@ -60,11 +60,30 @@
   "ruby_source_path": "Casks/voicevox.rb",
   "sha256": "69e4cf9afb6d5602f821f45d09dfb95d08b56edeee5693b34ab249db18a8c902",
   "skip_livecheck": false,
+  "supported_platforms": [
+    "golden_gate",
+    "arm64_golden_gate",
+    "tahoe",
+    "arm64_tahoe",
+    "sequoia",
+    "arm64_sequoia",
+    "sonoma",
+    "arm64_sonoma",
+    "ventura",
+    "arm64_ventura",
+    "monterey",
+    "arm64_monterey",
+    "big_sur",
+    "arm64_big_sur",
+    "catalina"
+  ],
   "tap": "himkt/tap",
-  "tap_git_head": "3484b6c75d1b5c98b08190099a4902185bd82d42",
+  "tap_git_head": "3873f42dd40a8f66571c837c5c3e55389817abc5",
   "token": "voicevox",
   "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-arm64.dmg",
-  "url_specs": {},
+  "url_specs": {
+    "verified": "github.com/VOICEVOX/voicevox/"
+  },
   "variations": {
     "golden_gate": {
       "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
@@ -97,6 +116,13 @@
     "catalina": {
       "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
       "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
+    },
+    "x86_64_linux": {
+      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
+      "sha256": null
+    },
+    "arm64_linux": {
+      "sha256": null
     }
   },
   "version": "0.25.0"
