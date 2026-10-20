@@ -78,7 +78,7 @@
     "catalina"
   ],
   "tap": "himkt/tap",
-  "tap_git_head": "2c68491b9e0c6b76250569a09d0fb41eac84d0d8",
+  "tap_git_head": "2bc0125dbc6723a4cbb56cc578e70a4c2cb8403b",
   "token": "voicevox",
   "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-arm64.dmg",
   "url_specs": {
