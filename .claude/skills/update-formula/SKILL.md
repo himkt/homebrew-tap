@@ -33,10 +33,11 @@ Argument: the GitHub release URL. Parse `{owner}/{repo}` and `{tag}` from it (e.
 
 4. **Deliver as a PR** per the git-workflow rules: branch `{name}-{tag}`, single-line commit `feat: update {name} to {tag}` containing only `Formula/{name}.rb`, push, then `gh pr create --fill`.
 
-5. **Wait for the `api` workflow** to regenerate the API JSON and push a `chore: regenerate api` commit to the PR branch:
+5. **Wait for the `api` workflow** to regenerate the API JSON and push a `chore: regenerate api` commit to the PR branch. Watch the run itself: the bot commit carries no checks of its own, so `gh pr checks` reports none once it lands.
 
    ```bash
-   gh pr checks {name}-{tag} --watch
+   gh run list --workflow api --branch {name}-{tag} --limit 1 --json databaseId --jq '.[0].databaseId'
+   gh run watch {run-id} --exit-status
    ```
 
 ## Verification
