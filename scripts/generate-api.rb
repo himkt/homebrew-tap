@@ -97,11 +97,12 @@ end
 # Every artifact carries its resolved install `target`, so the cask is loaded
 # with macOS's default directories as explicit config: SimulateSystem leaves
 # Linux's defaults (e.g. `appdir` ~/.config/apps) and the HOMEBREW_CASK_OPTS of
-# the generating machine in effect. `generating_hash!` swaps the generator's home
+# the generating machine in effect. Config accepts only the running platform's
+# directory keys, which on Linux are exactly the ones it redefines. `generating_hash!` swaps the generator's home
 # directory for the placeholder formulae.brew.sh publishes.
 def cask_hash(path)
   Cask::Cask.generating_hash!
-  config = Cask::Config.new(explicit: Cask::Config::DEFAULT_DIRS)
+  config = Cask::Config.new(explicit: Cask::Config::DEFAULT_DIRS.slice(*Cask::Config.defaults.keys))
   hash = Homebrew::SimulateSystem.with_tag(bottle_tag(BASE_TAG_PRIORITY.first)) do
     Cask::CaskLoader.load(path, config:).to_hash_with_variations.except(*CASK_STRIP)
   end
