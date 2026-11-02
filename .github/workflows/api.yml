@@ -6,6 +6,7 @@ on:
       - "Formula/**"
       - "Casks/**"
       - "scripts/generate-api.rb"
+      - ".github/workflows/api.yml"
 
 permissions:
   contents: write
@@ -18,10 +19,13 @@ jobs:
   regenerate:
     runs-on: ubuntu-latest
     steps:
+      - uses: Homebrew/actions/setup-homebrew@2026.10.26.1
+      # setup-homebrew replaces the workspace of a tap repository with a fresh,
+      # credential-less clone of the merge commit, so the pull request branch is
+      # checked out only after it.
       - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref }}
-      - uses: Homebrew/actions/setup-homebrew@2026.10.26.1
       - run: make api
       - name: Commit regenerated API JSON
         run: |

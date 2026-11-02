@@ -4,7 +4,7 @@
       "app": [
         "VOICEVOX.app"
       ],
-      "target": "/Applications/VOICEVOX.app"
+      "target": "/home/runner/.config/apps/VOICEVOX.app"
     },
     {
       "zap": [
@@ -23,8 +23,8 @@
   ],
   "auto_updates": null,
   "autobump": true,
-  "bundle_short_version": "0.25.0",
-  "bundle_version": "0.25.0",
+  "bundle_short_version": null,
+  "bundle_version": null,
   "caveats": null,
   "caveats_rosetta": null,
   "conflicts_with": null,
@@ -55,7 +55,7 @@
   "pinned_version": null,
   "rename": [],
   "ruby_source_checksum": {
-    "sha256": "62a7df714f59daab94b1a740f30eb8bcb845f1c3a98b99926fb50b9ba0bb029b"
+    "sha256": "84fb086acf71576755890cdc423d717721e8c087a373e7599050c11fdfaae55b"
   },
   "ruby_source_path": "Casks/voicevox.rb",
   "sha256": "69e4cf9afb6d5602f821f45d09dfb95d08b56edeee5693b34ab249db18a8c902",
@@ -74,16 +74,13 @@
     "monterey",
     "arm64_monterey",
     "big_sur",
-    "arm64_big_sur",
-    "catalina"
+    "arm64_big_sur"
   ],
   "tap": "himkt/tap",
-  "tap_git_head": "7bb3a42bfcf899e90d1c18ec2b85ce03a895f7f4",
+  "tap_git_head": "c9bdb5c4c88293bfaa3a71aa257a8de135f03650",
   "token": "voicevox",
   "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-arm64.dmg",
-  "url_specs": {
-    "verified": "github.com/VOICEVOX/voicevox/"
-  },
+  "url_specs": {},
   "variations": {
     "golden_gate": {
       "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
@@ -110,10 +107,6 @@
       "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
     },
     "big_sur": {
-      "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
-      "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
-    },
-    "catalina": {
       "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-x64.dmg",
       "sha256": "4ab37ad6840bbe89e9a33c1e48c6ad1a8da351fc801ab269cbfbce0c070da049"
     },
