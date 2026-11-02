@@ -51,8 +51,10 @@
   "keg_only_reason": null,
   "license": "MIT",
   "link_overwrite": [],
+  "local_patch_checksums": {},
   "name": "cafleet",
   "no_autobump_message": null,
+  "no_linkage_dependencies": [],
   "oldnames": [],
   "optional_dependencies": [],
   "options": [],
@@ -70,7 +72,7 @@
   "service": null,
   "skip_livecheck": false,
   "tap": "himkt/tap",
-  "tap_git_head": "7bb3a42bfcf899e90d1c18ec2b85ce03a895f7f4",
+  "tap_git_head": "0254911dcc1a7a6cbd77e237ba05806878de1b8d",
   "test_dependencies": [],
   "urls": {
     "stable": {

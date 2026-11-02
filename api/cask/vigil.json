@@ -11,7 +11,7 @@
       "app": [
         "Vigil.app"
       ],
-      "target": "/Applications/Vigil.app"
+      "target": "/home/runner/.config/apps/Vigil.app"
     },
     {
       "zap": [
@@ -24,8 +24,8 @@
   ],
   "auto_updates": null,
   "autobump": true,
-  "bundle_short_version": "1.1",
-  "bundle_version": "2",
+  "bundle_short_version": null,
+  "bundle_version": null,
   "caveats": null,
   "caveats_rosetta": null,
   "conflicts_with": null,
@@ -78,7 +78,7 @@
     "arm64_sonoma"
   ],
   "tap": "himkt/tap",
-  "tap_git_head": "7bb3a42bfcf899e90d1c18ec2b85ce03a895f7f4",
+  "tap_git_head": "0254911dcc1a7a6cbd77e237ba05806878de1b8d",
   "token": "vigil",
   "url": "https://github.com/morishin/Vigil/releases/download/v1.1/Vigil.zip",
   "url_specs": {},
