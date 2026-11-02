@@ -78,7 +78,7 @@
     "arm64_sonoma"
   ],
   "tap": "himkt/tap",
-  "tap_git_head": "0254911dcc1a7a6cbd77e237ba05806878de1b8d",
+  "tap_git_head": "c9bdb5c4c88293bfaa3a71aa257a8de135f03650",
   "token": "vigil",
   "url": "https://github.com/morishin/Vigil/releases/download/v1.1/Vigil.zip",
   "url_specs": {},
