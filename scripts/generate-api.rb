@@ -93,9 +93,18 @@ end
 # Casks run on macOS only, so the base tag is pinned rather than picked: an Intel
 # Mac and an ARM Mac then generate the same file, and Homebrew's own
 # `to_hash_with_variations` fills in every other tag.
+#
+# Every artifact carries its resolved install `target`, so the cask is loaded
+# with macOS's default directories as explicit config: SimulateSystem leaves
+# Linux's defaults (e.g. `appdir` ~/.config/apps) and the HOMEBREW_CASK_OPTS of
+# the generating machine in effect. Config accepts only the running platform's
+# directory keys, which on Linux are exactly the ones it redefines. `generating_hash!` swaps the generator's home
+# directory for the placeholder formulae.brew.sh publishes.
 def cask_hash(path)
+  Cask::Cask.generating_hash!
+  config = Cask::Config.new(explicit: Cask::Config::DEFAULT_DIRS.slice(*Cask::Config.defaults.keys))
   hash = Homebrew::SimulateSystem.with_tag(bottle_tag(BASE_TAG_PRIORITY.first)) do
-    Cask::CaskLoader.load(path).to_hash_with_variations.except(*CASK_STRIP)
+    Cask::CaskLoader.load(path, config:).to_hash_with_variations.except(*CASK_STRIP)
   end
   stamp_tap_identity(hash, path, name_key: "token", full_name_key: "full_token")
 end

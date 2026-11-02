@@ -11,7 +11,7 @@
       "app": [
         "Vigil.app"
       ],
-      "target": "/home/runner/.config/apps/Vigil.app"
+      "target": "/Applications/Vigil.app"
     },
     {
       "zap": [
@@ -78,7 +78,7 @@
     "arm64_sonoma"
   ],
   "tap": "himkt/tap",
-  "tap_git_head": "384bb4f9f23c77e3749bb112ea322f107597299c",
+  "tap_git_head": "67d8940c5fb5050d8a9c13c093213bdb6eaf396b",
   "token": "vigil",
   "url": "https://github.com/morishin/Vigil/releases/download/v1.1/Vigil.zip",
   "url_specs": {},
