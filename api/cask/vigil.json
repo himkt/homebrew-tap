@@ -11,7 +11,7 @@
       "app": [
         "Vigil.app"
       ],
-      "target": "/home/runner/.config/apps/Vigil.app"
+      "target": "/Applications/Vigil.app"
     },
     {
       "zap": [

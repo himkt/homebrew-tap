@@ -4,7 +4,7 @@
       "app": [
         "VOICEVOX.app"
       ],
-      "target": "/home/runner/.config/apps/VOICEVOX.app"
+      "target": "/Applications/VOICEVOX.app"
     },
     {
       "zap": [
