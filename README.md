@@ -19,7 +19,10 @@ raw.githubusercontent.com without running `brew`.
 A consumer installs the prebuilt binary from `bottle.stable.files`, keyed by
 bottle tag (`arm64_sonoma`, `x86_64_linux`, ...), and falls back to building the
 platform-independent `urls.stable` source archive when no bottle matches its tag.
-Regenerate after editing a formula or cask:
+
+The `api` workflow regenerates these files on every pull request that edits a
+formula or cask and pushes the result to the pull request branch. To regenerate
+locally instead:
 
 ```bash
 make api

@@ -5,7 +5,7 @@ description: Update a Homebrew formula in the himkt/homebrew-tap repository to a
 
 # Update Formula
 
-Bump a formula to the version of a given GitHub release, regenerate the API JSON, and open a PR.
+Bump a formula to the version of a given GitHub release and open a PR; CI regenerates the API JSON on the PR branch.
 
 Argument: the GitHub release URL. Parse `{owner}/{repo}` and `{tag}` from it (e.g. `https://github.com/himkt/cafleet/releases/tag/0.24.1` → repo `himkt/cafleet`, tag `0.24.1`). The formula name is the repo name: `Formula/{name}.rb`.
 
@@ -31,17 +31,15 @@ Argument: the GitHub release URL. Parse `{owner}/{repo}` and `{tag}` from it (e.
    - `sha256` → source tarball checksum from step 2
    - `bottle do` block: `root_url` → `https://github.com/{owner}/{repo}/releases/download/{tag}`, and each platform `sha256` → the matching asset digest from step 1. Update only platforms the release ships; keep the existing platform list otherwise.
 
-4. **Regenerate the API JSON** from the repo root:
+4. **Deliver as a PR** per the git-workflow rules: branch `{name}-{tag}`, single-line commit `feat: update {name} to {tag}` containing only `Formula/{name}.rb`, push, then `gh pr create --fill`.
+
+5. **Wait for the `api` workflow** to regenerate the API JSON and push a `chore: regenerate api` commit to the PR branch:
 
    ```bash
-   make api
+   gh pr checks {name}-{tag} --watch
    ```
-
-   This rewrites every file under `api/` (the other formulae/casks pick up a new `tap_git_head`). Include all regenerated files in the commit.
-
-5. **Deliver as a PR** per the git-workflow rules: branch `{name}-{tag}`, single-line commit `feat: update {name} to {tag}`, push, then `gh pr create --fill`.
 
 ## Verification
 
-- The diff touches `Formula/{name}.rb` plus `api/**` only.
-- `api/formula/{name}.json` shows the new tag in `versions.stable`, `urls.stable`, and every bottle URL/sha256.
+- The PR diff touches `Formula/{name}.rb` plus `api/**` only.
+- `api/formula/{name}.json` on the PR branch shows the new tag in `versions.stable`, `urls.stable`, and every bottle URL/sha256.
