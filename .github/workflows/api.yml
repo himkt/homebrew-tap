@@ -1,0 +1,35 @@
+name: api
+
+on:
+  pull_request:
+    paths:
+      - "Formula/**"
+      - "Casks/**"
+      - "scripts/generate-api.rb"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: api-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: Homebrew/actions/setup-homebrew@2026.10.26.1
+      - run: make api
+      - name: Commit regenerated API JSON
+        run: |
+          git add api
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: regenerate api"
+          git push
