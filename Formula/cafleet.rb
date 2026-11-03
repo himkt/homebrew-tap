@@ -1,15 +1,15 @@
 class Cafleet < Formula
   desc "Coding agent orchestrator for multi-agents collaboration across coding agent providers"
   homepage "https://github.com/himkt/cafleet"
-  url "https://github.com/himkt/cafleet/archive/refs/tags/0.31.1.tar.gz"
-  sha256 "f76138bee1ecfdf96e4817480d2b90105d107c43242de6451c15a83c49f548dc"
+  url "https://github.com/himkt/cafleet/archive/refs/tags/0.31.2.tar.gz"
+  sha256 "4fc2b8c968c2c4933b3c1423872f63373cd9d2fc84c987c76e31871d4e884894"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/himkt/cafleet/releases/download/0.31.1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "76c7ced6659170072c0181579294735d7ef63a6f9c56469ee994ba98ae372ebc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "252bc1725deabe8ae0a29676309bb205376335cad5489c2707e188bd61f5cf63"
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "0ce7acce408e0c9baa2e32b57b8908947f24576b878b4d20a2d5a00bf6098959"
+    root_url "https://github.com/himkt/cafleet/releases/download/0.31.2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "5e54ca8000577a33c78b6861c6e607eaca7514e20f67562167d03ed746d15b38"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6f90accba391487c0d41c7483eb326bb7be749fd43665e790a76956a8476b88e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "89c23e8045b3d0b67e79502b967bae7c53058bb091b710e1d4fb3433ba67fcc1"
   end
 
   # mise.toml pins the whole toolchain (node, pnpm, rust, zig), so it is the only build dep
