@@ -77,7 +77,7 @@
   "service": null,
   "skip_livecheck": false,
   "tap": "himkt/tap",
-  "tap_git_head": "a00b46a965d0ff1a98cffd11d675a96c7a76af8f",
+  "tap_git_head": "ba0b7500a40aa3568149570ebaba774fd4e4be83",
   "test_dependencies": [],
   "urls": {
     "stable": {
