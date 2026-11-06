@@ -5,7 +5,7 @@ description: Update a Homebrew formula in the himkt/homebrew-tap repository to a
 
 # Update Formula
 
-Bump a formula to the version of a given GitHub release and open a PR; CI regenerates the API JSON on the PR branch.
+Bump a formula to the version of a given GitHub release and open a PR; once it merges, CI opens a separate PR with the regenerated API JSON.
 
 Argument: the GitHub release URL. Parse `{owner}/{repo}` and `{tag}` from it (e.g. `https://github.com/himkt/cafleet/releases/tag/0.24.1` → repo `himkt/cafleet`, tag `0.24.1`). The formula name is the repo name: `Formula/{name}.rb`.
 
@@ -33,14 +33,15 @@ Argument: the GitHub release URL. Parse `{owner}/{repo}` and `{tag}` from it (e.
 
 4. **Deliver as a PR** per the git-workflow rules: branch `{name}-{tag}`, single-line commit `feat: update {name} to {tag}` containing only `Formula/{name}.rb`, push, then `gh pr create --fill`.
 
-5. **Wait for the `api` workflow** to regenerate the API JSON and push a `chore: regenerate api` commit to the PR branch. Watch the run itself: the bot commit carries no checks of its own, so `gh pr checks` reports none once it lands.
+5. **After the PR merges, wait for the `api` workflow** on `main`. It regenerates the API JSON and opens a `chore: regenerate api` PR from the `regenerate-api` branch:
 
    ```bash
-   gh run list --workflow api --branch {name}-{tag} --limit 1 --json databaseId --jq '.[0].databaseId'
+   gh run list --workflow api --branch main --limit 1 --json databaseId --jq '.[0].databaseId'
    gh run watch {run-id} --exit-status
+   gh pr view regenerate-api
    ```
 
 ## Verification
 
-- The PR diff touches `Formula/{name}.rb` plus `api/**` only.
-- `api/formula/{name}.json` on the PR branch shows the new tag in `versions.stable`, `urls.stable`, and every bottle URL/sha256.
+- The formula PR diff touches `Formula/{name}.rb` only.
+- The `regenerate-api` PR diff touches `api/**` only, and `api/formula/{name}.json` shows the new tag in `versions.stable`, `urls.stable`, and every bottle URL/sha256.
