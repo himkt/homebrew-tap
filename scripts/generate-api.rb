@@ -104,7 +104,7 @@ def cask_hash(path)
   Cask::Cask.generating_hash!
   config = Cask::Config.new(explicit: Cask::Config::DEFAULT_DIRS.slice(*Cask::Config.defaults.keys))
   hash = Homebrew::SimulateSystem.with_tag(bottle_tag(BASE_TAG_PRIORITY.first)) do
-    Cask::CaskLoader.load(path, config:).to_hash_with_variations.except(*CASK_STRIP)
+    Cask::CaskLoader.from_path(path, config:).to_hash_with_variations.except(*CASK_STRIP)
   end
   stamp_tap_identity(hash, path, name_key: "token", full_name_key: "full_token")
 end
