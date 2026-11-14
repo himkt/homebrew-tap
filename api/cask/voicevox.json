@@ -77,7 +77,7 @@
     "arm64_big_sur"
   ],
   "tap": "himkt/tap",
-  "tap_git_head": "25a5b3ee1fa3819d08e202964c9f3b31064cc688",
+  "tap_git_head": "96c897175f8072955cd9a4ad3162dc617d5437a9",
   "token": "voicevox",
   "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.0/VOICEVOX.0.25.0-arm64.dmg",
   "url_specs": {},
